@@ -1,7 +1,5 @@
 package org.example.stream;
 
-import java.util.ArrayList;
-
 public class Book {
     private String name;
     private int year;
@@ -29,7 +27,6 @@ public class Book {
     public void setYear(int year) {
         this.year = year;
     }
-
 
     @Override
     public String toString() {

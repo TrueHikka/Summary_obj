@@ -1,5 +1,8 @@
 package org.example.dz_map.phone_book;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class Main {
     public static void main(String[] args) {
         try {
@@ -13,25 +16,25 @@ public class Main {
             phoneBook.addUserInPhoneBook(user2);
             phoneBook.addUserInPhoneBook(user3);
 
-            System.out.println(phoneBook.getPhoneBookUsers());
+            log.debug("" + phoneBook.getPhoneBookUsers());
 
-            System.out.println("Данному человеку с именем " + user1.getUserName() + " принадлежит номер: " + phoneBook.findUserOfPhoneBook(
+            log.debug("Данному человеку с именем " + user1.getUserName() + " принадлежит номер: " + phoneBook.findUserOfPhoneBook(
                     "Ivan"));
 
             phoneBook.removeUserByName("Jesus");
-            System.out.print("phoneBook after remove Jesus: " + phoneBook.getPhoneBookUsers());
+            log.debug("phoneBook after remove Jesus: " + phoneBook.getPhoneBookUsers());
 
             System.out.println();
-            System.out.println(phoneBook.findUserOfPhoneBook("Petr"));
+            log.debug(phoneBook.findUserOfPhoneBook("Petr"));
 
-            System.out.print("\nПовторное удаление Jesus: ");
+            log.debug("\nПовторное удаление Jesus: ");
             phoneBook.removeUserByName("Jesus");
 
-            System.out.print("\nСоздание user4 с ошибочным номером: ");
+            log.debug("\nСоздание user4 с ошибочным номером: ");
             phoneBook.addUserInPhoneBook(user4);
-            System.out.print(phoneBook.getPhoneBookUsers());
+            log.debug("" + phoneBook.getPhoneBookUsers());
         } catch (UserNotFoundException e) {
-            System.err.println(e.getMessage());
+            log.debug(e.getMessage());
         }
     }
 }

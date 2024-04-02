@@ -1,7 +1,10 @@
 package org.example.multithreading;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Slf4j
 class SymbolOutput extends Thread {
     private StringBuilder stringBuilder;
     private AtomicInteger counter;
@@ -15,7 +18,7 @@ class SymbolOutput extends Thread {
     public void run() {
         for (int i = 0; i < 100; i++) {
             synchronized (stringBuilder) {
-                System.out.println(stringBuilder.charAt(0));
+                log.debug(Character.toString(stringBuilder.charAt(0)));
                 stringBuilder.setCharAt(0, (char) (stringBuilder.charAt(0) + 1));
             }
             counter.incrementAndGet();

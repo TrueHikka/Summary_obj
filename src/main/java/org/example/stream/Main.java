@@ -1,10 +1,12 @@
 package org.example.stream;
 
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+@Slf4j
 public class Main {
     public static void main(String[] args) {
 
@@ -21,17 +23,17 @@ public class Main {
         List<String> stringLengthMoreThan5 = strings.stream()
                 .filter(str -> str.length() > 5)
                 .toList();
-        System.out.println("Строки, длина которых больше 5: " + stringLengthMoreThan5);
+        log.debug("Строки, длина которых больше 5: " + stringLengthMoreThan5);
 
         List<String> reverseSortingOfStrings = strings.stream()
                 .sorted(Comparator.reverseOrder())
                 .toList();
-        System.out.println("Строки, отсортированные в обратном порядке: " + reverseSortingOfStrings);
+        log.debug("Строки, отсортированные в обратном порядке: " + reverseSortingOfStrings);
 
         List<String> reverseSortingOfStringsLengthMoreThan5 = stringLengthMoreThan5.stream()
                 .sorted(Comparator.reverseOrder())
                 .toList();
-        System.out.println("Строки, длина которых больше 5, отсортированные в обратном порядке: " + reverseSortingOfStringsLengthMoreThan5);
+        log.debug("Строки, длина которых больше 5, отсортированные в обратном порядке: " + reverseSortingOfStringsLengthMoreThan5);
 
         //task-2
         List<Book> books = Arrays.asList(
@@ -48,7 +50,7 @@ public class Main {
                 .map(Book::getName)
                 .toList();
 
-        System.out.println("Названия книг, изданных после 2000 года: " + booksMoreThan2000);
+        log.debug("Названия книг, изданных после 2000 года: " + booksMoreThan2000);
 
 
         //task-3
@@ -57,7 +59,7 @@ public class Main {
         Integer sumNumbers = numbers.stream()
                 .reduce(0, Integer::sum);
 
-        System.out.println("Сумма всех чисел в списке = " + sumNumbers);
+        log.debug("Сумма всех чисел в списке = " + sumNumbers);
 
         int[] numbersArray = numbers.stream()
                 .mapToInt(Integer::intValue)
@@ -67,13 +69,13 @@ public class Main {
                 .average()
                 .orElse(0);
 
-        System.out.println("Среднее значение всех чисел = " + average);
+        log.debug("Среднее значение всех чисел = " + average);
 
         List<Integer> numsMoreThan10 = numbers.stream()
                 .filter(num -> num > 10)
                 .sorted(Comparator.comparingInt(Integer::intValue))
                 .toList();
-        System.out.println("Числа, которые > 10: " + numsMoreThan10);
+        log.debug("Числа, которые > 10: " + numsMoreThan10);
 
     }
 }

@@ -1,10 +1,13 @@
 package org.example.dz_map.sort_employee;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
 
+@Slf4j
 public class Main {
     public static void main(String[] args) {
         Employee e1 = new Employee("John", 3000);
@@ -20,13 +23,13 @@ public class Main {
         employees.add(e2);
         employees.add(e3);
         employees.add(e4);
-        System.out.println(employees);
+        log.debug("" + employees);
 
         Collections.sort(employees);
-        System.out.println("Sorted by name: " + employees);
+        log.debug("Sorted by name: " + employees);
 
         Collections.sort(employees, new EmployeeSalaryComparator());
-        System.out.println("Sorted by salary: " + employees);
+        log.debug("Sorted by salary: " + employees);
 
         //TreeSet sort
         TreeSet<Employee> treeSet = new TreeSet<>();
@@ -34,7 +37,7 @@ public class Main {
         treeSet.add(e2);
         treeSet.add(e3);
         treeSet.add(e4);
-        System.out.println("TreeSet sorted by name: " + treeSet);
+        log.debug("TreeSet sorted by name: " + treeSet);
 
         TreeSet<Employee> treeSetWithComparator = new TreeSet<>(new EmployeeSalaryComparator());
         treeSetWithComparator.add(e1);
@@ -43,6 +46,6 @@ public class Main {
         treeSetWithComparator.add(e4);
         treeSetWithComparator.add(e5);
         treeSetWithComparator.add(e6);
-        System.out.println("TreeSet sorted by salary: " +  treeSetWithComparator);
+        log.debug("TreeSet sorted by salary: " +  treeSetWithComparator);
     }
 }
