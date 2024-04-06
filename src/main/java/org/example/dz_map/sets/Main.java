@@ -1,8 +1,11 @@
 package org.example.dz_map.sets;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashSet;
 import java.util.Set;
 
+@Slf4j
 public class Main {
     public static void main(String[] args) {
         Set<Integer> set1 = new HashSet<>();
@@ -21,16 +24,16 @@ public class Main {
         // Пересечение множеств
         Set<Integer> intersection = new HashSet<>(set1Copy);
         intersection.retainAll(set2Copy);
-        System.out.println("Пересечение множеств: " + intersection);
+        log.debug("Пересечение множеств: " + intersection);
 
         // Объединение множеств
         Set<Integer> union = new HashSet<>(set1Copy);
         union.addAll(set2Copy);
-        System.out.println("Объединение множеств: " + union);
-//
-//        // Разность первого множества и второго
+        log.debug("Объединение множеств: " + union);
+
+        // Разность первого множества и второго
         Set<Integer> difference = new HashSet<>(set1Copy);
         difference.removeAll(set2Copy);
-        System.out.println("Разность первого множества и второго: " + difference);
+        log.debug("Разность первого множества и второго: " + difference);
     }
 }

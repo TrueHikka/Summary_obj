@@ -1,8 +1,12 @@
 package org.example.multithreading;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
+@Slf4j
 public class Main {
+
     public static void main(String[] args) {
         StringBuilder stringBuilder = new StringBuilder("a");
         AtomicInteger counter = new AtomicInteger(0);
@@ -22,7 +26,6 @@ public class Main {
         } catch (InterruptedException e){
             e.printStackTrace();
         }
-
-        System.out.println("Суммарная отработка трех потоков: " + counter.get());
+        log.debug("Суммарная отработка трех потоков: " + counter.get());
     }
 }

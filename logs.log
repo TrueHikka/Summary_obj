@@ -1,0 +1,18 @@
+2024-04-03 00:18:18 INFO  o.e.d.d.Main:13 - Введите какие-нибудь слова:
+2024-04-03 00:18:30 INFO  o.e.d.d.Main:20 - Частота слов:
+2024-04-03 00:18:30 DEBUG o.e.d.d.Main:22 - trash: 1
+2024-04-03 00:23:50 DEBUG o.e.d.n.Main:14 - Enter names (type 'stop' to stop):
+2024-04-03 00:24:07 DEBUG o.e.d.n.Main:25 - Unique names:
+2024-04-03 00:24:07 DEBUG o.e.d.n.Main:29 - Trash
+2024-04-03 00:32:13 DEBUG o.e.d.p.Main:19 - {Mahmud=91243221411, Jesus=91248912334, Ivan=91243215334}
+2024-04-03 00:32:13 DEBUG o.e.d.p.Main:21 - Данному человеку с именем Ivan принадлежит номер: 91243215334
+2024-04-03 00:32:13 DEBUG o.e.d.p.Main:25 - phoneBook after remove Jesus: {Mahmud=91243221411, Ivan=91243215334}
+2024-04-03 00:32:13 DEBUG o.e.d.p.Main:37 - Человека c именем Petr нет в телефонной книге
+2024-04-03 00:33:44 DEBUG o.e.d.s.Main:27 - Пересечение множеств: [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+2024-04-03 00:33:44 DEBUG o.e.d.s.Main:32 - Объединение множеств: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+2024-04-03 00:33:44 DEBUG o.e.d.s.Main:37 - Разность первого множества и второго: [1, 2, 3, 4, 16, 17, 18, 19, 20]
+2024-04-03 00:34:46 DEBUG o.e.d.s.Main:26 - [John-3000.0, Alice-2000.0, Bob-2500.0, Charlie-3500.0]
+2024-04-03 00:34:46 DEBUG o.e.d.s.Main:29 - Sorted by name: [Alice-2000.0, Bob-2500.0, Charlie-3500.0, John-3000.0]
+2024-04-03 00:34:46 DEBUG o.e.d.s.Main:32 - Sorted by salary: [Alice-2000.0, Bob-2500.0, Charlie-3500.0, John-3000.0]
+2024-04-03 00:34:46 DEBUG o.e.d.s.Main:40 - TreeSet sorted by name: [Alice-2000.0, Bob-2500.0, Charlie-3500.0, John-3000.0]
+2024-04-03 00:34:46 DEBUG o.e.d.s.Main:49 - TreeSet sorted by salary: [Alice-2000.0, Bob-2500.0, Charlie-500.0, Charlie-700.0, Charlie-3500.0, John-3000.0]
